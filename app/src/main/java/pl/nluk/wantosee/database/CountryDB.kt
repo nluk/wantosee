@@ -22,6 +22,14 @@ class CountryDB : BaseModel {
         fun insertCountry(country: Country) {
             CountryDB(country).save()
         }
+
+        fun getCountryById(id: Long): Country?{
+            return SQLite.select()
+                .from(CountryDB::class.java)
+                .where(CountryDB_Table.id.`is`(id))
+                .querySingle()?.toDomain()
+
+        }
     }
 
     @PrimaryKey(autoincrement = true)
@@ -36,9 +44,9 @@ class CountryDB : BaseModel {
     }
 
     constructor(country: Country) {
-        country.let {
-            id = it.id
-            name = it.name
+        run {
+            id = country.id
+            name = country.name
         }
     }
     fun toDomain(): Country =
