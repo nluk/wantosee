@@ -1,10 +1,8 @@
-package pl.nluk.wantosee.retrofit
+package pl.nluk.wantosee.connectivity.rest
 
-import pl.nluk.wantosee.database.CountryDB
 import pl.nluk.wantosee.models.Country
 import retrofit2.Call
 import retrofit2.http.GET
-import java.util.concurrent.Callable
 
 interface CountriesInterface {
 
