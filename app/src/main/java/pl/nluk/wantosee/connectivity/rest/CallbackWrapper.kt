@@ -1,4 +1,4 @@
-package pl.nluk.wantosee.connectivity
+package pl.nluk.wantosee.connectivity.rest
 
 import retrofit2.Call
 import retrofit2.Callback

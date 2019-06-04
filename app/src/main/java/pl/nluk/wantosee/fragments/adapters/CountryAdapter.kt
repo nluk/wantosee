@@ -14,6 +14,7 @@ import pl.nluk.wantosee.models.Country
 class CountryAdapter(context: Context, @LayoutRes private val layoutResource: Int, val allCountries: List<Country>) :
     ArrayAdapter<Country>(context, layoutResource, allCountries) {
 
+
     private val countries: MutableList<Country> = ArrayList()
     private val countriesFiler = CountryFilter()
 
@@ -50,7 +51,6 @@ class CountryAdapter(context: Context, @LayoutRes private val layoutResource: In
     }
 
     inner class CountryFilter : Filter() {
-
 
         override fun convertResultToString(resultValue: Any?): CharSequence {
             return (resultValue as Country).name

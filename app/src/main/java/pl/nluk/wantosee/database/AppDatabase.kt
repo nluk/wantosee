@@ -7,6 +7,6 @@ import com.raizlabs.android.dbflow.annotation.Database
 class AppDatabase {
     companion object{
         const val DB_NAME = "WANTOSEE"
-        const val VERSION = 1
+        const val VERSION = 5
     }
 }

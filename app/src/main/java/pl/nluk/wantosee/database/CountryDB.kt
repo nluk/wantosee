@@ -30,6 +30,13 @@ class CountryDB : BaseModel {
                 .querySingle()?.toDomain()
 
         }
+
+        fun getCountryNameById(id: Long): String? {
+            return SQLite.select()
+                .from(CountryDB::class.java)
+                .where(CountryDB_Table.id.`is`(id))
+                .querySingle()?.name
+        }
     }
 
     @PrimaryKey(autoincrement = true)
